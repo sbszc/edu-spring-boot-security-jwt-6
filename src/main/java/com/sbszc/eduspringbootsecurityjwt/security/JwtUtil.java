@@ -31,10 +31,6 @@ public class JwtUtil {
                 .compact();
     }
 
-    private Key getKey() {
-        return Keys.hmacShaKeyFor(KEY.getBytes());
-    }
-
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
@@ -44,7 +40,8 @@ public class JwtUtil {
     }
 
     public boolean isTokenExpired(String token) {
-        return extractExpiration(token).before(new Date());
+        Date expirationDate = extractExpiration(token);
+        return expirationDate.before(new Date());
     }
 
     private <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
@@ -58,5 +55,9 @@ public class JwtUtil {
                 .build()
                 .parseClaimsJws(token)
                 .getBody();
+    }
+
+    private Key getKey() {
+        return Keys.hmacShaKeyFor(KEY.getBytes());
     }
 }
