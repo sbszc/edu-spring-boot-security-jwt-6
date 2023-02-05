@@ -1,4 +1,4 @@
-package com.sbszc.eduspringbootsecurityjwt.security;
+package com.sbszc.eduspringbootsecurityjwt6.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

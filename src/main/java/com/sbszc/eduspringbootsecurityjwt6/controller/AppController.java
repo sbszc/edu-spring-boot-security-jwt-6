@@ -1,8 +1,8 @@
-package com.sbszc.eduspringbootsecurityjwt.controller;
+package com.sbszc.eduspringbootsecurityjwt6.controller;
 
-import com.sbszc.eduspringbootsecurityjwt.dto.AppRequest;
-import com.sbszc.eduspringbootsecurityjwt.dto.AppResponse;
-import com.sbszc.eduspringbootsecurityjwt.security.JwtUtil;
+import com.sbszc.eduspringbootsecurityjwt6.dto.AppRequest;
+import com.sbszc.eduspringbootsecurityjwt6.dto.AppResponse;
+import com.sbszc.eduspringbootsecurityjwt6.security.JwtUtil;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
